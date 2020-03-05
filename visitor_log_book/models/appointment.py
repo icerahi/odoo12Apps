@@ -2,7 +2,7 @@ from odoo import fields,api,models,_
 
 class Appointment(models.Model):
     _name = 'appointment'
-    _inherit = ['mail.thread','mail.activity.mixin']
+  #  _inherit = ['mail.thread','mail.activity.mixin']
     _rec_name = 'appointment_date'
 
     @api.onchange('employee')

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+<!-- inherit override search view -->
+     <record id="employee_search" model="ir.ui.view">
+            <field name="name">Employee Search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter" />
+            <field name="arch" type="xml">
+               <search>
+                   <field name="name" position="before">
+                     <field name="work_phone"/>
+
+                   </field>
+               </search>
+            </field>
+        </record>
+
+<!--       employee actions -->
+        <record id="employee_action" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Employee </field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p> No Employee created Yet!!</p>
+            </field>
+        </record>
+
+       <menuitem id="root_menu" name="VISITOR LOGBOOK" sequence="0"/>
+
+        <menuitem id="employee_menu" parent="root_menu" sequence="3" name="Employee" action="employee_action"/>
+
+     </data>
+</odoo>

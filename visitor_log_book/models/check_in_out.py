@@ -3,7 +3,7 @@ from datetime import datetime
 
 class CheckInOut(models.Model):
     _name='visitor_log_book.checkinout'
-   # _inherit = ['mail.thread','mail.activity.mixin']
+    _inherit = ['mail.thread','mail.activity.mixin']
     _rec_name = 'vi_phone'
 
     @api.onchange('visitor')

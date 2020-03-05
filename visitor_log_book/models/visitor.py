@@ -12,7 +12,7 @@ class Company(models.Model):
 
 class Visitor(models.Model):
     _name = 'visitor_log_book.visitor'
-    _inherit = ['mail.thread','mail.activity.mixin']
+    #_inherit = ['mail.thread','mail.activity.mixin']
 
     name = fields.Char('Visitor Phone',required=True)
     phone = fields.Char(string='Visitor Name',required=True)

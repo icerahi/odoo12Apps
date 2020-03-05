@@ -51,16 +51,6 @@ class Appointment(models.Model):
             self.vi_phone = result.phone
             self.nid = result.nid
 
-    @api.onchange('vi_phone')
-    def based_on_vi_phone(self):
-        result=self.env['visitor_log_book.visitor'].search([('phone','=',self.vi_phone)])
-        if result:
-            self.visitor = result.id
-            self.visitor_id = result.visitor_id
-            self.company = result.company.name
-            self.designation = result.designation.name
-            self.nid = result.nid
-
 
     @api.onchange('visitor_id')
     def based_on_visitor_id(self):

@@ -1,17 +1,18 @@
 {
-    'name': "VISITOR LOG BOOK",
+    'name': "VISITOR LOG MANAGEMENT",
 
     'summary': """
-        Custom Odoo module for Initial practice by Rahi""",
+       Resolve the manual process for keeping, maintaining the employees and visitor’s information.""",
 
     'description': """
-        Simple working for practice and learning
+        Any organization need an efficient method in order to handle the visitor's and employee’s information. For build strong business profile and smooth their business process, management need to record each and every detail of visitors and also record their visits.
+Logbook resolve automate their manual process for keeping, maintaining the employees and visitor’s information.
     """,
 
-    'author': "Imran Hasan",
-    'website': "https://www.fb.com/icerahi/",
-    'category': 'Tools',
-    'version': '1.0',
+    'author': "Metamorphosis",
+    'website': "https://metamorphosis.com.bd",
+    'category': 'Human Resources',
+    'version': '12.0',
     'depends': [
         'base',
         'mail',
@@ -28,8 +29,12 @@
 
 
     ],
+    "images": ["static/description/cover.png"],
+    'icon': "/visitor_log_book/static/description/icon.png", 
+
     'license': "",
     'installable': True,
     'application': True,
     'sequence': 1,
+    "license": "OPL-1",
 }
